@@ -1,14 +1,19 @@
 #include <stdio.h>
+#include <math.h>
 main()
 {
-    float precio_neto, precio_coste, margen;
-    // Entrada de datos: precio_coste y margen
-    printf ("¿Cual es el precio de coste?");
-    scanf ("%f", &precio_coste);
-    printf ("¿Cual es el margen?");
-    scanf("%f", &margen);
-    // Proceso: calculo del precio neto
-    precio_neto=precio_coste*(100+margen)/100;
-    // Salida de datos
-    printf ("El precio neto de este producto es:de %f euros\n", precio_neto);
+    float cateto1, cateto2, hipotenusa, area, perimetro;
+    // lectura de datos de entrada: cateto1 y cateto2
+    printf("cateto1?");
+    scanf("%f", &cateto1);
+    printf("Cateto2?");
+    scanf("%f", &cateto2);
+    // Proceso: calculo de la hipotenusa, del area y del perimetetro
+    hipotenusa=sqrt(cateto1*cateto1 + cateto2*cateto2);
+    area=(cateto1*cateto2)/2.0;
+    perimetro=cateto1+cateto2+hipotenusa;
+    // Salida de los resultados
+    printf("La hipotenusa es: %f\n", hipotenusa);
+    printf("El area es: %f\n", area);
+    printf("El perimetro es: %f\n", perimetro);
 }
